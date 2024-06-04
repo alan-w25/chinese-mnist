@@ -1,0 +1,11 @@
+pandas 
+numpy 
+scikit-learn 
+torch
+torchvision
+matplotlib
+seaborn
+dill 
+seaborn
+
+#-e .
