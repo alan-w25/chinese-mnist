@@ -6,6 +6,8 @@ from ml_model.scripts.logger import logging
 from dataclasses import dataclass 
 from sklearn.model_selection import train_test_split
 from ml_model.scripts.components.data_transformation import DataTransformation
+from ml_model.scripts.components.model_trainer import ModelTrainer
+from backend.app.models.vanilla_cnn import vanilla_cnn
 
 '''
 This class represents the file paths for raw and processed data
@@ -54,3 +56,7 @@ if __name__ == "__main__":
     
     dt = DataTransformation()
     train_tset, test_tset = dt.initiate_data_preprocessing(train_data, test_data)
+    
+    model_trainer = ModelTrainer()
+    model = vanilla_cnn(15)
+    test_loss, test_accuracy = model_trainer.initiate_model_trainer(model, train_tset, test_tset)

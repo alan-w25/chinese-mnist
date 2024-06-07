@@ -75,8 +75,16 @@ class DataTransformation:
             logging.info("successfully preprocessed raw df")
             logging.info("Initializing tensor dataset creation")
             
-            train_dataset = ChineseMNISTDataset(processed_train_data, root_dir=self.transformation_config.image_data_path, transform=transforms.ToTensor())
-            test_dataset = ChineseMNISTDataset(processed_test_data, root_dir=self.transformation_config.image_data_path, transform=transforms.ToTensor())
+            transform = transforms.Compose([
+                transforms.Grayscale(num_output_channels=1),
+                transforms.Resize((64, 64)),
+                transforms.ToTensor(),
+                transforms.Normalize((0.5,), (0.5,))
+            ])
+
+            
+            train_dataset = ChineseMNISTDataset(processed_train_data, root_dir=self.transformation_config.image_data_path, transform=transform)
+            test_dataset = ChineseMNISTDataset(processed_test_data, root_dir=self.transformation_config.image_data_path, transform=transform)
             
             logging.info("successfully developed tensor datasets")
             
