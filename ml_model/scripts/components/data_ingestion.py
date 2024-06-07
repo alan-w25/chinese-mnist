@@ -5,6 +5,7 @@ from ml_model.scripts.exception import CustomException
 from ml_model.scripts.logger import logging 
 from dataclasses import dataclass 
 from sklearn.model_selection import train_test_split
+from ml_model.scripts.components.data_transformation import DataTransformation
 
 '''
 This class represents the file paths for raw and processed data
@@ -49,4 +50,7 @@ class DataIngestion:
             raise CustomException(e, sys)
 if __name__ == "__main__":
     obj = DataIngestion() 
-    obj.initiate_data_ingestion()
+    train_data, test_data = obj.initiate_data_ingestion()
+    
+    dt = DataTransformation()
+    train_tset, test_tset = dt.initiate_data_preprocessing(train_data, test_data)
