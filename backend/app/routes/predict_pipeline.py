@@ -1,7 +1,7 @@
 from fastapi import APIRouter, HTTPException 
 from pydantic import BaseModel
-from backend.app.models.model import load_model
-from backend.app.utils.image_processing import transform_image
+from app.models.model import load_model
+from app.utils.image_processing import transform_image
 from ml_model.scripts.logger import logging
 from ml_model.scripts.exception import CustomException
 from PIL import Image, ImageOps
@@ -21,7 +21,7 @@ class PredictResponse(BaseModel):
 
 router = APIRouter()
 
-model_path = "../ml_model/models/saved_model.pth"
+model_path = "./ml_model/models/saved_model.pth"
 model = load_model(model_path)
 
 prediction_to_class = {

@@ -1,7 +1,6 @@
-"use client"; 
-
-import { Button } from "@aws-amplify/ui-react";
-import { useState } from "react";
+"use client";
+import { useState, ChangeEvent } from 'react';
+import React from 'react';
 
 
 interface PredictionCardProps {
@@ -32,12 +31,12 @@ const PredictionCard: React.FC<PredictionCardProps> = ({prediction, confidence, 
         setError(null);
         setShowPredictionCard(false);
     };
-    const handleWasCorrect = (e) => {
+    const handleWasCorrect = (e:ChangeEvent<HTMLSelectElement>) => {
         setError(null);
         setWasCorrect(e.target.value === 'yes');
     }
 
-    const handleSelectCorrect = (e) => {
+    const handleSelectCorrect = (e:ChangeEvent<HTMLSelectElement>) => {
         setError(null); 
         setCorrect(e.target.value);
     }
@@ -48,7 +47,7 @@ const PredictionCard: React.FC<PredictionCardProps> = ({prediction, confidence, 
             {prediction && <p className="text-lg mb-4">Prediction: {prediction}</p>}
             {confidence && <p className="text-lb mb-4">Prediction Confidence: {confidence} percent</p>}
 
-            <Button onClick={handleSubmit} className="ml-4 mt-4 mr-2 bg-gray-300 p-2 rounded hover:bg-gray-500">Try Again</Button>
+            <button onClick={handleSubmit} className="ml-4 mt-4 mr-2 bg-gray-300 p-2 rounded hover:bg-gray-500">Try Again</button>
             
             
             {showResponse && (
@@ -92,7 +91,7 @@ const PredictionCard: React.FC<PredictionCardProps> = ({prediction, confidence, 
                         </select>
                     </div>)}
                 {error && <p className="text-red-500">{error}</p>}
-                <Button onClick={handleSubmit} className="ml-4 mt-4 mr-2 bg-gray-300 p-2 rounded hover:bg-gray-500">Submit</Button>
+                <button onClick={handleSubmit} className="ml-4 mt-4 mr-2 bg-gray-300 p-2 rounded hover:bg-gray-500">Submit</button>
             </div>)}
         </div>
     );

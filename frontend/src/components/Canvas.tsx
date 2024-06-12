@@ -146,7 +146,7 @@ const Canvas: React.FC<CanvasProps> = ({setPrediction, setShowPredictionCard, se
 
     useEffect(() => {
         initializeCanvas();
-    }, []);
+    });
 
     const initializeCanvas = () => {
         if (!bgCanvasRef.current) return;

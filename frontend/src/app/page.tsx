@@ -82,7 +82,6 @@ export default function Home() {
             character="零"
             pinyin="líng"
             audioSrc="/audio/cmnist-0.mp3"
-            strokeOrderImg="/digits/cmnist-0.png"
             drawingGif="/gifs/cmnist-0.gif"
           />
 
@@ -91,7 +90,6 @@ export default function Home() {
             character="一"
             pinyin="yī"
             audioSrc="/audio/cmnist-1.mp3"
-            strokeOrderImg="/digits/cmnist-1.png"
             drawingGif="/gifs/cmnist-1.gif"
           />
 
@@ -100,7 +98,6 @@ export default function Home() {
             character="二"
             pinyin="èr"
             audioSrc="/audio/cmnist-2.mp3"
-            strokeOrderImg="/digits/cmnist-2.png"
             drawingGif="/gifs/cmnist-2.gif" 
           />
 
@@ -109,7 +106,6 @@ export default function Home() {
             character="三"
             pinyin="sān"
             audioSrc="/audio/cmnist-3.mp3"
-            strokeOrderImg="/digits/cmnist-3.png"
             drawingGif="/gifs/cmnist-3.gif"
             />
 
@@ -118,7 +114,6 @@ export default function Home() {
             character="四"
             pinyin="sì"
             audioSrc="/audio/cmnist-4.mp3"
-            strokeOrderImg="/digits/cmnist-4.png"
             drawingGif="/gifs/cmnist-4.gif"
           />
           <Digit
@@ -126,7 +121,6 @@ export default function Home() {
             character="五"
             pinyin="wǔ"
             audioSrc="/audio/cmnist-5.mp3"
-            strokeOrderImg="/digits/cmnist-5.png"
             drawingGif="/gifs/cmnist-5.gif"
           />
           <Digit
@@ -134,7 +128,6 @@ export default function Home() {
             character="六"
             pinyin="liù"
             audioSrc="/audio/cmnist-6.mp3"
-            strokeOrderImg="/digits/cmnist-6.png"
             drawingGif="/gifs/cmnist-6.gif"
           />
           <Digit
@@ -142,7 +135,6 @@ export default function Home() {
             character="七"
             pinyin="qī"
             audioSrc="/audio/cmnist-7.mp3"
-            strokeOrderImg="/digits/cmnist-7.png"
             drawingGif="/gifs/cmnist-7.gif"
             />
           <Digit
@@ -150,7 +142,6 @@ export default function Home() {
             character="八"
             pinyin="bā"
             audioSrc="/audio/cmnist-8.mp3"
-            strokeOrderImg="/digits/cmnist-8.png"
             drawingGif="/gifs/cmnist-8.gif"
           />
           <Digit 
@@ -158,7 +149,6 @@ export default function Home() {
             character="九"
             pinyin="jiǔ"
             audioSrc="/audio/cmnist-9.mp3"
-            strokeOrderImg="/digits/cmnist-9.png"
             drawingGif="/gifs/cmnist-9.gif"
           />
           <Digit 
@@ -166,7 +156,6 @@ export default function Home() {
             character="百"
             pinyin="bǎi"
             audioSrc="/audio/cmnist-100.mp3"
-            strokeOrderImg="/digits/cmnist-100.png"
             drawingGif="/gifs/cmnist-100.gif"
             />
           <Digit
@@ -174,7 +163,6 @@ export default function Home() {
             character="千"
             pinyin="qiān"
             audioSrc="/audio/cmnist-1000.mp3"
-            strokeOrderImg="/digits/cmnist-1000.png"
             drawingGif="/gifs/cmnist-1000.gif"
             />
           <Digit
@@ -182,7 +170,6 @@ export default function Home() {
             character="万"
             pinyin="wàn"
             audioSrc="/audio/cmnist-10000.mp3"
-            strokeOrderImg="/digits/cmnist-10000.png"
             drawingGif="/gifs/cmnist-10000.gif"
           />
           <Digit 
@@ -190,7 +177,6 @@ export default function Home() {
             character="亿"
             pinyin="yì"
             audioSrc="/audio/cmnist-hunmil.mp3"
-            strokeOrderImg="/digits/cmnist-hunmil.png"
             drawingGif="/gifs/cmnist-hunmil.gif"
           />
 

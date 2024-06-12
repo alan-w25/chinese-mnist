@@ -1,7 +1,8 @@
-from backend.app.models.vanilla_cnn import vanilla_cnn
+from app.models.vanilla_cnn import vanilla_cnn
 import torch
 def load_model(model_path: str):
-    checkpoint = torch.load(model_path)
+    device = torch.device('cpu')
+    checkpoint = torch.load(model_path, map_location=device)
     model_architecture = checkpoint['model_architecture']
     num_classes = checkpoint['num_classes']
     

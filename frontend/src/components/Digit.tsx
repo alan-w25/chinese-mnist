@@ -9,11 +9,10 @@ interface DigitProps {
     character: string;
     pinyin: string;
     audioSrc: string;
-    strokeOrderImg: string;
     drawingGif: string;
 }
 
-const Digit: React.FC<DigitProps> = ({name, number, character, pinyin, audioSrc, strokeOrderImg, drawingGif}) => {
+const Digit: React.FC<DigitProps> = ({name, character, pinyin, audioSrc, drawingGif}) => {
 
     const audioRef = useRef<HTMLAudioElement>(null); 
 

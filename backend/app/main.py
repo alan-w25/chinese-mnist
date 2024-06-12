@@ -1,7 +1,7 @@
 from fastapi import FastAPI 
 import uvicorn
 from fastapi.middleware.cors import CORSMiddleware
-from backend.app.routes import predict_pipeline
+from app.routes import predict_pipeline
 
 app = FastAPI() 
 
@@ -33,4 +33,4 @@ async def health_check():
 
 
 if __name__ == "__main__":
-   uvicorn.run("backend.app.main:app", host="127.0.0.1", port=8000, reload=True)
+   uvicorn.run("app.main:app", host="127.0.0.1", port=8000, reload=True)

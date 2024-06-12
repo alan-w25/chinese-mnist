@@ -1,0 +1,12 @@
+*__pycache__
+*.pyc
+
+# Ignore environment files
+.env
+
+logs/**
+
+# Ignore directories in ml_model you want to exclude
+ml_model/**
+!ml_model/scripts/** 
+!ml_model/models/**
