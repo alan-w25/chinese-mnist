@@ -2,6 +2,8 @@ version: "3.8"
 
 services:
   backend:
+    image: alanlwu/backend:latest
+    platform: linux/amd64
     build:
       #context specifies the main directory of the container
       context: ./backend
@@ -10,20 +12,13 @@ services:
       - "8000:8000"
     environment:
       - PYTHONPATH=/code
-    command:
-      [
-        "uvicorn",
-        "app.main:app",
-        "--host",
-        "0.0.0.0",
-        "--port",
-        "8000",
-        "--reload",
-      ]
+    command: ["uvicorn", "app.main:app", "--host", "0.0.0.0", "--port", "8000"]
   frontend:
+    image: alanlwu/frontend:latest
+    platform: linux/amd64
     environment:
-      - NODE_ENV=development
-    command: npm run dev
+      - NODE_ENV=production
+    command: ["npm", "run", "start"]
     build:
       context: ./frontend
       dockerfile: Dockerfile

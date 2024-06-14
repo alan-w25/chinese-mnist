@@ -4,7 +4,12 @@
 # Ignore environment files
 .env
 
-logs/**
+*.log
+
+
+Dockerfile*
+.dockerignore
+
 
 # Ignore directories in ml_model you want to exclude
 ml_model/**
